@@ -285,7 +285,6 @@ public class ConverterProcessor extends AbstractProcessor {
         // 生成 transform 方法 return 语句
         MethodSpec transform = transformBuilder.addStatement("return product").build();
 
-
         /**
          * public List<UserModel> transform(List<UserEntity> fromList) {
          *     if (fromList == null) return null;
@@ -297,8 +296,6 @@ public class ConverterProcessor extends AbstractProcessor {
          *     return toList;
          *   }
          */
-
-
         // 创建 transform list 方法
         MethodSpec.Builder transformListBuilder = MethodSpec.methodBuilder(METHOD_NAME);
 
