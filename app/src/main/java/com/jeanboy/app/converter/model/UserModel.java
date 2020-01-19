@@ -4,6 +4,8 @@ package com.jeanboy.app.converter.model;
 import com.jeanboy.converter.annotation.Field;
 import com.jeanboy.converter.annotation.Product;
 
+import java.util.List;
+
 /**
  * @author caojianbo
  * @since 2020/1/16 16:46
@@ -25,6 +27,9 @@ public class UserModel {
 
     @Field(identity = "createAt")
     private Long createAt;
+
+    @Field(identity = "list")
+    private List<String> strings;
 
     public String getName() {
         return name;
@@ -64,5 +69,13 @@ public class UserModel {
 
     public void setCreateAt(Long createAt) {
         this.createAt = createAt;
+    }
+
+    public List<String> getStrings() {
+        return strings;
+    }
+
+    public void setStrings(List<String> strings) {
+        this.strings = strings;
     }
 }

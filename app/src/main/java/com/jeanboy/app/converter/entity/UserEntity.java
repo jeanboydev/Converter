@@ -4,6 +4,8 @@ package com.jeanboy.app.converter.entity;
 import com.jeanboy.converter.annotation.Field;
 import com.jeanboy.converter.annotation.Source;
 
+import java.util.List;
+
 /**
  * @author caojianbo
  * @since 2020/1/16 17:14
@@ -25,6 +27,9 @@ public class UserEntity {
 
     @Field(identity = "createAt")
     private Long createAtTime;
+
+    @Field(identity = "list")
+    private List<String> stringList;
 
     public boolean isCanDo() {
         return isCanDo;
@@ -64,5 +69,13 @@ public class UserEntity {
 
     public void setCreateAtTime(Long createAtTime) {
         this.createAtTime = createAtTime;
+    }
+
+    public List<String> getStringList() {
+        return stringList;
+    }
+
+    public void setStringList(List<String> stringList) {
+        this.stringList = stringList;
     }
 }
