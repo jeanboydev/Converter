@@ -1,0 +1,18 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // javapoet 库，用于动态生成代码
+    implementation 'com.squareup:javapoet:1.11.1'
+    // 依赖 module_annotation，用于处理自定义注解
+    implementation project(":lib-annotation")
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
