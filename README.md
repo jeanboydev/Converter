@@ -10,7 +10,6 @@ JavaBean 转换工具。
 
 ```java
 public class UserEntity {
-
     private String userName;
     private boolean isCanDo;
     private int ageCount;
@@ -25,7 +24,6 @@ public class UserEntity {
 
 ```java
 public class UserModel {
-
     private String name;
     private boolean isCan;
     private int age;
@@ -76,7 +74,6 @@ public class UserModelConverter {
 ```java
 @Source("user") // 这是源，也就是从哪里转换
 public class UserEntity {
-
     @Field(identity = "haha") // 标名字段的唯一性
     private String userName;
     @Field(identity = "can")
@@ -98,7 +95,6 @@ public class UserEntity {
 ```java
 @Product("user") // 这是产品，也就是要转换成的类
 public class UserModel {
-
     @Field(identity = "haha") // 标名字段的唯一性，与源一一对应
     private String name;
     @Field(identity = "can")
